@@ -36,7 +36,7 @@ FamixTMethod classSide >> famixTMethodRelatedGroup [
 FamixTMethod classSide >> generatedSlotNames [
 	<generated>
 	'FamixTMethod class>>#generatedSlotNames'.
-	^ #(isClassSide kind parentType)
+	^ #(isAbstract isClassSide kind parentType)
 ]
 
 { #category : #generator }
@@ -58,6 +58,23 @@ FamixTMethod >> cyclomaticComplexity [
 FamixTMethod >> cyclomaticComplexity: aNumber [
 
 	self privateState propertyAt: #cyclomaticComplexity put: aNumber
+]
+
+{ #category : #accessing }
+FamixTMethod >> isAbstract [
+
+	<MSEProperty: #isAbstract type: #Boolean>
+	<generated>
+	<MSEComment: 'True if abstract method'>
+	^ isAbstract
+]
+
+{ #category : #accessing }
+FamixTMethod >> isAbstract: anObject [
+
+	<generated>
+	isAbstract := anObject
+
 ]
 
 { #category : #accessing }
